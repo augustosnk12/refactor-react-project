@@ -5,7 +5,7 @@ import api from "../../services/api";
 
 import { Container } from "./styles";
 
-interface FoodProps {
+export interface FoodProps {
   id: number;
   name: string;
   description: string;
@@ -14,13 +14,13 @@ interface FoodProps {
   available: boolean;
 }
 
-interface FoodProps {
+interface CFoodProps {
   food: FoodProps;
   handleEditFood: ({}: FoodProps) => void;
   handleDelete: (id: number) => Promise<void>;
 }
 
-const Food = ({ food, handleEditFood, handleDelete }: FoodProps): JSX.Element => {
+const Food = ({ food, handleEditFood, handleDelete }: CFoodProps): JSX.Element => {
   const [isAvailable, setIsAvailable] = React.useState(true);
 
   const toggleAvailable = async () => {
