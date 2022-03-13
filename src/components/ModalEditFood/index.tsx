@@ -1,4 +1,4 @@
-import React, { Component, createRef } from "react";
+import React from "react";
 import { FiCheckSquare } from "react-icons/fi";
 
 import Modal from "../Modal";
